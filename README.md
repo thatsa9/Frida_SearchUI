@@ -9,6 +9,8 @@ Discovering the Microsoft Search (SearchUI.exe) has been sending search result d
 ## Testing on environments:
 * Windows 10, version 1909
 * Python 3 with frida
+* WinDBG
+* MitMProxy
 
 ## Demo 
 
