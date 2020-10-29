@@ -1,0 +1,17 @@
+bp WININET!HttpOpenRequestW ".printf \"HttpOpenRequestW: verb: %mu, path: %mu\\n\", @rdx, @r8; gc"
+bp WININET!HttpOpenRequestA ".printf \"HttpOpenRequestA: verb: %ma, path: %ma\\n\", @rdx, @r8; gc"
+bp WININET!InternetConnectW ".printf \"InternetConnectW hostname: %mu\\n\", @rdx; gc"
+bp WININET!InternetConnectA ".printf \"InternetConnectA hostname: %ma\\n\", @rdx; gc"
+bp WININET!HttpSendRequestW ".printf \"HttpSendRequestW headers: %mu, body: %mu\\n\", @rdx, @r9; gc"
+bp WININET!HttpSendRequestExW ".printf \"HttpSendRequestExW lpBuffersIn: %p\\n\", @rdx; gc"
+bp WININET!HttpSendRequestA ".printf \"HttpSendRequestA headers: %ma, body: %ma\\n\", @rdx, @r9; gc"
+bp WININET!HttpSendRequestExA ".printf \"HttpSendRequestExA lpBuffersIn: %p\\n\", @rdx; gc"
+bp WININET!HttpAddRequestHeadersA ".printf \"HttpAddRequestHeadersA: %ma\\n\", @rdx; gc"
+bp WININET!InternetWriteFile ".printf \"InternetWriteFile: %ma\\n\", @rdx; gc"
+
+bp WININET!InternetOpenA ".printf \"InternetOpenA lpszAgent: %ma\\n\", @rcx; gc"
+bp WININET!InternetOpenW ".printf \"InternetOpenW lpszAgent: %mu\\n\", @rcx; gc"
+
+# will call A. duplicated display
+bp WININET!HttpAddRequestHeadersW ".printf \"HttpAddRequestHeadersW: %mu\\n\", @rdx; gc"
+
