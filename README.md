@@ -1,6 +1,4 @@
-# SearrhUI
-
-A Frida script to hooking windows's SearchUI.exe process.
+# Frida script to hooking windows's SearchUI.exe process.
 
 TL; DR
 * Every client to search on Windows Search Function will send data to Bing even local search.
